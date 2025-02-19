@@ -13,13 +13,13 @@
 ### **常用地點管理**
 
 **API 路徑：**
-`[GET]/api/Feature/GeneralLocations`
+`[GET]/api/Feature/LocationCommons`
 
 自動抓取該用戶的常用地點清單，可依照是否病患傳送以及排序顯示給用戶調整。
 
 ---
 **API 路徑：**
-`[PUT]/api/RequestForm/LocationOptions/`
+`[PUT]/api/Feature/LocationCommons`
 **requestBody(格式array)**
 ```
 [
@@ -39,7 +39,7 @@
 
 ----
 **API 路徑：**
-`[POST]/api/RequestForm/LocationOptions/`
+`[POST]/api/Feature/LocationCommons`
 **requestBody**
 ```
 {
