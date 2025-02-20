@@ -45,6 +45,7 @@
 | 已核對、未核對 | `IsConfirm` |
 | 傳送員申請取消案件 | `IsCancelling` |
 | 核對錯誤 | `IsIgnore` |
+| 病患、非病患 | `IsPatientMove` |
 | 需來回案件 | `IsSendBack = true && HasSendback = true` |
 | `RequestState` |New,Assign,Response,Closed|
 ---
