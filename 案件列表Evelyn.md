@@ -33,8 +33,25 @@
 | 病患資訊 | `PatientName+PatientMedicalRecordNumber` |
 | 注意事項 | `[核對]+{SubjectType}+#+{SubjectTypeId} +#+{RemarkNames}+{Remarks}` |
 | 專案 | `ProjectName` |
-| 返回 | `AllowSendBack(btn) or IsSendBack` |
 | 滿意度 | `(btn)` |
 | 稽核 | `Audits` |
-
+| 案件狀態 | `JobState` |
+| 已到達or未到達 | `ResponseState` |
+| 重要or一般 | `MarkState` |
+| 執行中過久未到達 | `ResponseTimeExceeded` |
+| 傳送員-已讀or未讀 | `IsRead` |
+| 緊急 | `Emergency` |
+| 延遲(數字，>0) | `DelayCount` |
+| 已核對、未核對 | `IsConfirm` |
+| 傳送員申請取消案件 | `IsCancelling` |
+| 核對錯誤 | `IsIgnore` |
+| 需來回案件 | `IsSendBack = true && HasSendback = true` |
+| `RequestState` |New,Assign,Response,Closed|
 ---
+
+已完工案件列表
+| **前端欄位名稱 (columnName)** | **API Key** |
+|------------------|------------------|
+| 返回(RequestState==='Closed') | `AllowSendBack(btn)` |
+| 滿意度 | `(btn)` |
+
