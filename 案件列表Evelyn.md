@@ -163,3 +163,35 @@
 | 建立日期  | createDate |
 | 簽收人  | signee |
 
+### RequestAction-案件動作 中英/欄位KEY對照表
+
+| 中文  | 英文 |
+|----------------|----------------|
+| 新增案件 | New |
+| 直接指派 | Designate |
+| 未定時案件啟動 | UndeterminedStart |
+| 排程案件啟動 | ScheduledStart |
+| 單位返回 | SendBack |
+| 手機返回 | SendBackByMobile |
+| 定點定時 To 臨時傳送 | TransferToCentral |
+| 新增案件(醫院) | HospitalNew |
+| 派工 | Assign |
+| 智慧派工 | SA |
+| 轉派 | Transfer |
+| 到達 | Response |
+| 完工 | Complete |
+| 取消 | Cancel |
+| 傳送員請求取消 | ApplyForCancel |
+| 中心同意取消 | ApplyForCancel_Ok |
+| 中心駁回取消 | ApplyForCancel_No |
+| 編輯 | Edit |
+| 延遲 | Delay |
+| 提升為緊急案件 | UpToEmergency |
+| 重新申請 | RecreateOrder |
+| 指派交接 | HandoverDesignated |
+| 交接Bus Route | HandoverToBus |
+| 交接成功 | HandoverSuccess |
+| 交接取消 | HandoverCancel |
+| 定點定時轉臨時傳送 | BusRouteToCentral |
+| 轉臨時傳送 | TransferToAdhoc |
+| 轉駐站 | TransferToStation |
