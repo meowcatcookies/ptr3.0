@@ -195,3 +195,33 @@
 | 定點定時轉臨時傳送 | BusRouteToCentral |
 | 轉臨時傳送 | TransferToAdhoc |
 | 轉駐站 | TransferToStation |
+
+## Action-動作按鈕
+### [PATCH]/api/StatusConfigurations/Assign
+#### request Body
+```
+{
+  "isRush": true,
+  "porterId": "CDC8FB46-0FCB-4EAD-84DF-5EF3D00F8224",
+  "orderNo": "2025021800006"
+}
+```
+#### 1.Assign 中英KEY對照表
+ps."執行中案件列表"以及"駐站案件列表"皆適用(駐站案件列表沒有"臨時插單"就將參數填否)
+| 中文  | 英文 |
+|----------------|----------------|
+| 是否臨時插單 | isRush |
+| 案件編號 | orderNo |
+| 傳送員的userId | porterId |
+
+#### 傳送員選項API
+[GET]/api/RequestForm/PorterOptions?isOnDuty=true
+PS.如果要篩選是否為駐站&isStation=false
+
+### [PATCH]/api/StatusConfigurations/UpToEmergency/orderNo
+#### 2.UpToEmergency 中英KEY對照表
+將指定案件設置為緊急狀態，"執行中案件列表"以及"駐站案件列表"皆適用。
+
+| 中文  | 英文 |
+ |----------------|----------------|
+ | 案件編號 | orderNo |
