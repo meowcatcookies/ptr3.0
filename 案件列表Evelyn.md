@@ -209,7 +209,8 @@
  | 到達時間 | ResponseTime(nullable) |
  | 動作 | IsSendBack |
 
-! [已完工多點] (2025-03-07 15_47_18-已完工案件列表 - UETrack™.jpg)
+<img src="img\2025-03-07 15_47_18-已完工案件列表 - UETrack™.jpg" alt="已完工多點" width="500" height="450">
+<img src="img\2025-03-07 15_46_27-已完工案件列表 - UETrack™.jpg" alt="已完工多點" width="500" height="300">
 
 #### 動作
  * 只有排序-Sequence最後一個要顯示
