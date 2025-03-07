@@ -209,6 +209,8 @@
  | 到達時間 | ResponseTime(nullable) |
  | 動作 | IsSendBack |
 
+! [已完工多點] (2025-03-07 15_47_18-已完工案件列表 - UETrack™.jpg)
+
 #### 動作
  * 只有排序-Sequence最後一個要顯示
  * 已取消列表不用顯示動作
