@@ -40,6 +40,7 @@
 | WaitingExceeded      | 逾時未派             |
 | Excuting             | 執行中               |
 | ExcutingExceeded     | 執行過久             |
+
 ### 篩選狀態
 
 | 中文 (Chinese)       | 英文 (English)       |
@@ -196,27 +197,80 @@
 | 轉臨時傳送 | TransferToAdhoc |
 | 轉駐站 | TransferToStation |
 
+## [GET]/api/StatusConfigurations/Multiples/{orderNo}
+ * RequestType = 3,多點傳送-detail
+### 執行中案件列表顯示
+ * 到達按鈕 [PATCH]/api/StatusConfigurations/Response/{orderNo}(到達第一個單位)
 
 
- ## 已完工案件列表 & 已取消案件列表
- * RequestType = 3,多點傳送
- * [GET]/api/StatusConfigurations/MultiplesJobDetails/{orderNo}
+ <img src="img\2025-03-19 14_29_11-執行中案件列表 - UETrack™.jpg" alt="多點傳送" >
+ <img src="img\2025-03-19 14_34_32-執行中案件列表 - UETrack™.jpg" alt="多點傳送" >
 
+
+#### 到達第一個單位後可以不依序到達，API則需帶上案件次序
+ * paramName : multipleRequestSequence = sequence(int)
+
+
+ <img src="img\2025-03-19 14_52_48-執行中案件列表 - UETrack™.jpg" alt="多點傳送" >
+ <img src="img\2025-03-19 14_59_10-執行中案件列表 - UETrack™.jpg" alt="多點傳送" >
+
+#### 到達最後一個案件時顯示完工按鈕，API則是同上
+
+ <img src="img\2025-03-19 14_59_56-執行中案件列表 - UETrack™.jpg" alt="多點傳送" >
+
+#### 多點傳送 中英/欄位KEY對照表
  | 中文  | 英文 |
  |----------------|----------------|
  | 地點 | locationName |
  | 傳送員 | PorterName (nullable) |
  | 到達時間 | ResponseTime(nullable) |
- | 動作 | IsSendBack |
+ | 動作 | HasSendback |
+ | 順序 | sequence |
 
-<img src="img\2025-03-07 15_47_18-已完工案件列表 - UETrack™.jpg" alt="已完工多點" width="500" height="450">
-<img src="img\2025-03-07 15_46_27-已完工案件列表 - UETrack™.jpg" alt="已完工多點" width="500" height="300">
+### 已完工案件列表顯示
 
-#### 動作
- * 只有排序-Sequence最後一個要顯示
- * 已取消列表不用顯示動作
+<img src="img\2025-03-07 15_46_27-已完工案件列表 - UETrack™.jpg" alt="已完工多點">
+<img src="img\2025-03-07 15_47_18-已完工案件列表 - UETrack™.jpg" alt="已完工多點" >
 
-| 動作顯示 | 條件 |
+#### 只有排序-Sequence最後一個要顯示
+
+| 動作顯示中文 | 條件 |
  |----------------|----------------|
- | 已返回 | IsSendBack === true |
- | 已完成 | IsSendBack === false |
+ | 已返回 | HasSendback === true |
+ | 已完成 | HasSendback === false |
+
+### 已取消案件顯示
+#### 不用顯示動作(或者討論移除這欄位)
+
+<img src="img\2025-03-19 15_03_38-已取消案件列表 - UETrack™.jpg" alt="已取消多點">
+
+
+## [GET]/api/StatusConfigurations/UndeterminedMultiples/{orderNo}
+ * RequestType = 4,分段多點傳送(未定時)-detail
+### 執行中案件列表顯示
+
+ * 執行中案件列表中，動作上跟一般案件差不多。
+
+<img src="img\2025-03-19 15_10_01-執行中案件列表 - UETrack™.jpg" alt="執行中分段多點" >
+
+#### 分段多點傳送 中英/欄位KEY對照表
+
+ | 中文  | 英文 |
+ |----------------|----------------|
+ | 順序 | sequence |
+ | 傳送單位 | fromLocationName |
+ | 到達單位 | toLocationName |
+ | 狀態 | isStarted(bool) |
+ | 案件編號 | orderNo(nullable) |
+
+ | 狀態  | 判斷 |
+ |----------------|----------------|
+ | 已啟動 | isStarted = true |
+ | (空白) | isStarted=false |
+
+### 已完工案件列表顯示
+
+<img src="img\2025-03-17 09_39_24-已完工案件列表 - UETrack™.jpg" alt="未定時多點顯示細節" >
+
+
+
