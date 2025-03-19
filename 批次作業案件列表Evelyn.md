@@ -171,9 +171,9 @@
 | 傳送工具 | equipName |
 | 需求時間 | requestTime |
 | 預約時間 | advanceTime(nullable) |
-| 派工時間 | assignTime |
+| 派工時間 | assignTime(nullable) |
 | 傳送員 | porterName |
-| 到達時間 | responseTime |
+| 到達時間 | responseTime(nullable) |
 
 ### 批次延遲(送出) [PUT]/api/StatusConfigurations/Delay
 #### Body
@@ -216,9 +216,9 @@
 | 傳送工具 | equipName |
 | 需求時間 | requestTime |
 | 預約時間 | advanceTime(nullable) |
-| 派工時間 | assignTime |
+| 派工時間 | assignTime (nullable)|
 | 傳送員 | porterName |
-| 到達時間 | responseTime |
+| 到達時間 | responseTime (nullable)|
 
 ### 批次取消(送出) [PUT]/api/StatusConfigurations/Cancel
 #### Body
