@@ -260,13 +260,14 @@
  | 順序 | sequence |
  | 傳送單位 | fromLocationName |
  | 到達單位 | toLocationName |
- | 狀態 | isStarted(bool) |
+ | 狀態 | isStarted(bool)or isCanceled(bool) |
  | 案件編號 | orderNo(nullable) |
 
  | 狀態  | 判斷 |
  |----------------|----------------|
- | 已啟動 | isStarted = true |
- | (空白) | isStarted=false |
+  | 已取消(優先判斷，只會有一個) |  isCanceled=true |
+ | 已啟動 | isStarted = true && isCanceled=false |
+ | (空白) | isStarted=false && isCanceled=false |
 
 ### 已完工案件列表顯示
 
