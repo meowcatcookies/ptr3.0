@@ -63,7 +63,7 @@
 |----------------------|----------------------|
 | Assign               | 派工                 |
 | Transfer             | 轉派(顯示工號，不是中文)                 |
-| Handover             | 交接                 |
+| Handover             | 交接  (抵達才會出現)               |
 | Emergency            | 提升為緊急案件                 |
 | TransferToStation    | 轉駐站案件             |
 | Delay                | 延遲                 |
@@ -71,7 +71,7 @@
 | Edit                 | 編輯                 |
 | Response             | 到達                 |
 | Complete             | 完工                 |
-
+| Designate            | 中心代交接(交接後才會顯示)|
 
 
 ### ProjectName 中英對照表
