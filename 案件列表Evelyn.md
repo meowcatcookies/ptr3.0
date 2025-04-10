@@ -17,7 +17,7 @@
 | 完工時間 | `CompleteTime` |
 | 傳送員 | `PorterName` |
 | 病患資訊 | `PatientNamePatientMedicalRecordNumber` |
-| 注意事項 | `[核對]+{SubjectType}+#+{SubjectTypeId} +#+{RemarkNames}+{RemarkItemList}` |
+| 注意事項 | `[核對]+{SubjectType}+#+{VerifySubjectId} +#+{RemarkNames}+{RemarkItemList}` |
 | 專案 | `ProjectName` |
 | 滿意度 | `(btn)` |
 | 稽核 | `Audits` |
@@ -119,7 +119,7 @@
 | 預約時間  | advanceTime(如果沒有似乎不用顯示此欄位) |
 | 注意事項  | remarksList-remarkName + remarks |
 | 核對項目 | SubjectType(string) |
-| 條碼 | SubjectTypeId(string) |
+| 條碼 | verifySubjectId(string) |
 | 核對狀況(true=已核對/false=未核對) | IsConfirm(bool) |
 | 紀錄 | (展開後以下的KEY) |
 | 成功=true/失敗=false|verifyIsSuccess|
