@@ -274,5 +274,43 @@
 
 <img src="img\2025-03-17 09_39_24-已完工案件列表 - UETrack™.jpg" alt="未定時多點顯示細節" >
 
+---
+### 動作各列表動作 (將依照不同身分以及案件狀態變動)
+#### 執行中案件列表:*原欄位名* "動作"
+```
+    {
+        "columnName": "動作",
+        "columnLabel": "ActionList",
+        "sort": 9,
+        "contentRules": "Emergency+TransferToStation+Delay+Cancel+Edit+Response+Complete+Assign",
+        "data": {
+            "ActionList": "Emergency,TransferToStation,Delay,Cancel,Edit,Response,Complete,Assign"
+        }
+    }
+```
+#### 已完工案件列表:*原欄位名* "返回"->改成"動作"
 
+ ```
+       {
+            "columnName": "動作",
+            "columnLabel": "ActionList",
+            "sort": 16,
+            "contentRules": "SendBack",
+            "data": {
+                "ActionList": "SendBack"
+            }
+        }
+```
+#### 已取消案件列表:*原欄位名* "空白" (重新申請按鈕)->改成"動作"
+```
+       {
+            "columnName": "動作",
+            "columnLabel": "ActionList",
+            "sort": 15,
+            "contentRules": "RecreateOrder",
+            "data": {
+                "ActionList": "RecreateOrder"
+            }
+        }
+```
 
